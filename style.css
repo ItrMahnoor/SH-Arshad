@@ -2,55 +2,152 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+scroll-behavior:smooth;
+font-family:Segoe UI,Arial,sans-serif;
 }
 
 body{
-background:#f4f6f9;
-color:#333;
+background:#071222;
+color:white;
 }
 
-header{
-background:#0b3c5d;
+nav{
+position:fixed;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 60px;
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(8px);
+z-index:1000;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+nav a{
 color:white;
-padding:60px 20px;
-text-align:center;
+text-decoration:none;
+font-weight:600;
 }
 
 .logo{
-width:120px;
-margin-bottom:20px;
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.logo img{
+width:55px;
+}
+
+.hero{
+height:100vh;
+background:url("images/hero.jpg") center center/cover no-repeat;
+display:flex;
+align-items:center;
+}
+
+.overlay{
+background:rgba(0,0,0,.55);
+height:100%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding-left:10%;
+}
+
+.hero h1{
+font-size:90px;
+}
+
+.hero h3{
+font-size:45px;
+letter-spacing:8px;
+margin:15px 0;
+}
+
+.hero p{
+font-size:22px;
+max-width:600px;
+margin-bottom:35px;
+}
+
+.button{
+background:#0077ff;
+padding:16px 36px;
+border-radius:35px;
+text-decoration:none;
+color:white;
+width:max-content;
+}
+
+section{
+padding:100px 10%;
+}
+
+section h2{
+font-size:42px;
+margin-bottom:40px;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .card{
-background:white;
-width:90%;
-max-width:900px;
-margin:30px auto;
+background:#0f2238;
 padding:30px;
-border-radius:10px;
-box-shadow:0 4px 15px rgba(0,0,0,.1);
+border-radius:15px;
+text-align:center;
 }
 
-.card h2{
-color:#0b3c5d;
-margin-bottom:15px;
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
 }
 
-.card ul{
-margin-left:20px;
-line-height:2;
+.product{
+background:#0f2238;
+border-radius:18px;
+overflow:hidden;
 }
 
-a{
-color:#0b3c5d;
-text-decoration:none;
+.product img{
+width:100%;
+display:block;
+}
+
+.product h3{
+padding:20px;
+}
+
+.product p,
+.product ul{
+padding:0 20px 20px;
+}
+
+.product ul li{
+margin:10px 0;
 }
 
 footer{
-background:#0b3c5d;
-color:white;
+background:#02101d;
+padding:50px;
 text-align:center;
-padding:20px;
-margin-top:40px;
+line-height:2;
+}
+
+footer a{
+color:#52b6ff;
+text-decoration:none;
 }
